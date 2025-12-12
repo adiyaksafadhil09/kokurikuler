@@ -1,0 +1,226 @@
+<<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Griya Sinau New - Jelajahi Budaya</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Logo Griya Sinau" class="header-logo"> 
+        Griya Sinau
+    </div>
+    
+    <nav>
+        <a href="#explore">Jelajahi</a>
+        <a href="host.html" id="host">Menjadi Host</a> 
+        
+        <a href="login.html" class="nav-login">Masuk</a> 
+
+        <div class="dropdown">
+            <button class="nav-help-btn" id="helpBtn">
+                <i class="fa-solid fa-circle-question"></i>
+            </button>
+            <div class="dropdown-content" id="helpDropdown">
+                
+                <a href="#">Panduan</a>
+                <a href="#">Pusat Bantuan</a>
+                <a href="#">Hubungi Kami</a>
+                <a href="#">Tentang Kami</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Jelajahi Keanekaragaman Nusantara</h1>
+            <p>Dapatkan pengalaman belajar dengan sang guru.</p>
+            
+            <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i> 
+                <input type="text" id="searchInput" placeholder="Cari: Batik,kuliner,musik...">
+                <button class="btn-search" id="searchBtn">Cari</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="content" id="explore">
+        <div class="content-header">
+            <h2>Rekomendasi Pengalaman</h2>
+        </div>
+
+        <div class="grid" id="experienceGrid">
+            <article class="card">
+                <img src="OIP (2).webp" alt="Wayang Kulit">
+                <div class="card-info">
+                    <span class="card-tag">Seni Pertunjukan • Solo</span>
+                    <h3>Workshop Wayang Kulit</h3>
+                    <p>Belajar teknik dasar mendalang dan mengenal filosofi tokoh-tokoh pewayangan Jawa.</p>
+                    <div class="price">Rp 200.000</div>
+                </div>
+            </article>
+            <article class="card">
+                <img src="OIP.webp">
+                <div class="card-info">
+                    <span class="card-tag">Kerajinan • Yogyakarta</span>
+                    <h3>Batik Tulis Klasik</h3>
+                    <p>Membatik manual bersama Ibu Sumiyati di sanggar tertua.</p>
+                    <div class="price">Rp 150.000</div>
+                </div>
+            </article>
+            <article class="card">
+                <img src="OSK.jpg">
+                <div class="card-info">
+                    <span class="card-tag">Kuliner • Bali</span>
+                    <h3>Masak Ayam Betutu</h3>
+                    <p>Workshop memasak Ayam Betutu dengan bumbu rempah otentik.</p>
+                    <div class="price">Rp 300.000</div>
+                </div>
+            </article>
+            <article class="card">
+                <img src="OIP (1).webp">
+                <div class="card-info">
+                    <span class="card-tag">Seni • Cirebon</span>
+                    <h3>Tari Topeng Kelana</h3>
+                    <p>Mengenal karakter manusia melalui gerakan tari topeng sakral.</p>
+                    <div class="price">Rp 125.000</div>
+                </div>
+            </article>
+            <article class="card">
+                <img src="istock-475556666jpg-20221017085749.jpg" alt="Tenun Ulos">
+                <div class="card-info">
+                    <span class="card-tag">Kerajinan • Sumatera Utara</span>
+                    <h3>Menyulam Kain Ulos Batak</h3>
+                    <p>Belajar tradisi menyulam benang menjadi kain ulos dengan motif tradisional Toba.</p>
+                    <div class="price">Rp 220.000</div>
+                </div>
+            </article>
+            <article class="card">
+                <img src="BBE.jpg" alt="Coto Makassar">
+                <div class="card-info">
+                    <span class="card-tag">Kuliner • Makassar</span>
+                    <h3>Kelas Masak Coto Makassar</h3>
+                    <p>Rahasia bumbu 40 rempah untuk membuat Coto Makassar otentik dari Chef lokal.</p>
+                    <div class="price">Rp 180.000</div>
+                </div>
+            </article>
+            <article class="card">
+                <img src="OIP (3).webp" alt="Angklung">
+                <div class="card-info">
+                    <span class="card-tag">Seni Musik • Bandung</span>
+                    <h3>Workshop Bermain Angklung</h3>
+                    <p>Pelatihan singkat bermain alat musik tradisional Angklung dalam sebuah ansambel.</p>
+                    <div class="price">Rp 95.000</div>
+                </div>
+            </article>
+            <article class="card">
+                <img src="ASD.jpg" alt="Tari Dayak">
+                <div class="card-info">
+                    <span class="card-tag">Seni Tari • Kalimantan Tengah</span>
+                    <h3>Tarian Kinyah Mandau</h3>
+                    <p>Pelajari gerakan dasar tarian perang suku Dayak Ngaju yang melambangkan keberanian.</p>
+                    <div class="price">Rp 175.000</div>
+                </div>
+            </article>
+            <article class="card">
+                <img src="PPD.jpg" alt="Papeda">
+                <div class="card-info">
+                    <span class="card-tag">Kuliner • Ambon</span>
+                    <h3>Membuat Papeda & Ikan Kuah Kuning</h3>
+                    <p>Workshop tentang cara mengolah sagu menjadi Papeda dan meracik kuah kuning segar khas Maluku.</p>
+                    <div class="price">Rp 250.000</div>
+                </div>
+            </article>
+            <article class="card">
+                <img src="ggb.jpg" alt="Gerabah Lombok">
+                <div class="card-info">
+                    <span class="card-tag">Kerajinan • Lombok</span>
+                    <h3>Membentuk Gerabah Tanah Liat</h3>
+                    <p>Kelas praktik langsung di desa Sukarara untuk membuat kerajinan gerabah khas suku Sasak.</p>
+                    <div class="price">Rp 140.000</div>
+                </div>
+            </article>
+            <article class="card">
+                <img src="Tari-Yospan-Tari-Papua.jpg" alt="Tari Yospan">
+                <div class="card-info">
+                    <span class="card-tag">Seni Tari • Papua</span>
+                    <h3>Workshop Tari Yospan Kontemporer</h3>
+                    <p>Pelatihan tari modern asal Biak, memadukan gerakan tradisional dan akrobatik.</p>
+                    <div class="price">Rp 190.000</div>
+                </div>
+            </article>
+            <article class="card">
+                <img src="rdg.jpg" alt="Rendang">
+                <div class="card-info">
+                    <span class="card-tag">Kuliner • Padang</span>
+                    <h3>Rahasia Bumbu Rendang</h3>
+                    <p>Kelas memasak otentik Rendang daging sapi dengan resep turun-temurun Minangkabau.</p>
+                    <div class="price">Rp 350.000</div>
+                </div>
+            </article>
+            <article class="card">
+                <img src="Kain-Tenun-Sumba.jpg" alt="Tenun Ikat Sumba">
+                <div class="card-info">
+                    <span class="card-tag">Kerajinan • Sumba</span>
+                    <h3>Menenun Ikat Sumba</h3>
+                    <p>Pelajari proses pewarnaan alami dan teknik menenun motif legendaris Sumba Timur.</p>
+                    <div class="price">Rp 280.000</div>
+                </div>
+            </article>
+            <article class="card">
+                <img src="kacapi-suling-768x576.jpg" alt="Suling Sunda">
+                <div class="card-info">
+                    <span class="card-tag">Seni Musik • Jawa Barat</span>
+                    <h3>Belajar Alat Musik Suling Sunda</h3>
+                    <p>Kelas praktik memainkan Suling/Seruling Sunda dan mengenal tangga nada pentatonik (pelog/salendro).</p>
+                    <div class="price">Rp 110.000 / Sesi</div>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="OIP (5).webp" alt="Kopi Gayo">
+                <div class="card-info">
+                    <span class="card-tag">Kuliner • Aceh</span>
+                    <h3>Meracik Kopi Gayo Autentik</h3>
+                    <p>Workshop mulai dari biji, proses *roasting* tradisional, hingga menyajikan kopi Aceh yang kaya rasa.</p>
+                    <div class="price">Rp 160.000 / Sesi</div>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="OIP (6).webp" alt="Ukiran Toraja">
+                <div class="card-info">
+                    <span class="card-tag">Kerajinan • Toraja</span>
+                    <h3>Mengukir Simbol Tongkonan</h3>
+                    <p>Pelatihan seni ukir kayu motif *Pa'ssura'* khas Toraja, memahami makna simbolik ukiran rumah adat.</p>
+                    <div class="price">Rp 230.000 / Sesi</div>
+                </div>
+            </article>
+        </div>
+
+        <div id="noResults" class="no-results" style="display: none;">
+            <p>Maaf, pengalaman budaya yang Anda cari belum tersedia.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; copyright 2025 Fadhil Adila Aero Raffi A'mal.</p>
+    </footer>
+    
+    <div id="experienceModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modalBody">
+                </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
