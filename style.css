@@ -1,0 +1,483 @@
+/* style.css - KODE UTUH */
+
+/* 1. Global & Variables */
+:root {
+    --primary: #8B4513;    /* Saddle Brown (Tanah/Tradisi) */
+    --accent: #D2691E;     /* Chocolate (Aksen) */
+    --white: #ffffff;
+    --bg: #fdfaf7;         /* Warm off-white */
+    --text-dark: #2d3436;
+    --text-light: #636e72;
+    --shadow-soft: 0 5px 15px rgba(0,0,0,0.05);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    background: var(--bg); 
+    margin: 0; 
+    line-height: 1.6;
+}
+
+/* 2. Navigation & Header */
+header {
+    background: var(--white);
+    padding: 1rem 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky; top: 0; z-index: 1000;
+}
+
+.logo { 
+    font-size: 1.5rem; 
+    font-weight: 800; 
+    color: var(--primary); 
+}
+
+nav a { 
+    text-decoration: none; 
+    color: #333; 
+    margin-left: 20px; 
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+.nav-login { 
+    background: var(--primary); 
+    color: white !important; 
+    padding: 8px 18px; 
+    border-radius: 20px; 
+}
+
+/* 3. Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url('https://images.unsplash.com/photo-1536631980211-82558661726a?auto=format&fit=crop&w=1350&q=80');
+    height: 60vh; 
+    background-size: cover; 
+    background-position: center;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    color: white; 
+    text-align: center;
+}
+
+/* 4. Search Bar (Kolom Pencarian Menarik) */
+.search-container {
+    background: #ffffff;
+    padding: 8px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center; /* Pusatkan item secara vertikal */
+    width: 90%;
+    max-width: 600px;
+    margin: 30px auto 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2); 
+    border: 2px solid transparent; /* Border awal transparan */
+    transition: all 0.3s;
+}
+
+/* Efek Fokus saat input di klik */
+.search-container:focus-within {
+    border: 2px solid var(--primary); 
+    box-shadow: 0 0 10px rgba(139, 69, 19, 0.4); 
+}
+
+.search-icon {
+    font-size: 1.2rem;
+    color: var(--text-light); 
+    margin: 0 15px; 
+    transition: color 0.3s;
+}
+
+/* Ubah warna ikon saat fokus */
+.search-container:focus-within .search-icon {
+    color: var(--primary);
+}
+
+/* Modifikasi input agar lebih menarik dengan gambar */
+.search-container input {
+    /* Hapus padding kiri karena sudah ada ikon, padding kanan perlu ditambah */
+    padding: 12px 20px 12px 0; /* Tambah padding kanan untuk gambar */
+    
+    border: none;
+    flex-grow: 1;
+    outline: none;
+    font-size: 1rem;
+    background: transparent;
+
+    /* PROPERTI BARU UNTUK GAMBAR BACKGROUND DI DALAM INPUT */
+    background-image: url('https://i.imgur.com/v8tTq9J.png'); /* Gambar ikon kecil */
+    background-repeat: no-repeat;
+    background-position: right 15px center; /* Posisi di kanan, 15px dari tepi, di tengah vertikal */
+    background-size: 20px; /* Ukuran gambar kecil */
+}
+
+.btn-search { 
+    background: var(--primary); 
+    color: white; 
+    border: none; 
+    padding: 0 25px; 
+    border-radius: 50px; 
+    cursor: pointer;
+    height: 48px; /* Sesuaikan dengan tinggi input */
+}
+
+/* 5. Content & Grid */
+.content { 
+    padding: 4rem 8%; 
+}
+
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px; 
+}
+
+.card { 
+    background: white; 
+    border-radius: 15px; 
+    overflow: hidden; 
+    box-shadow: var(--shadow-soft); 
+    transition: 0.3s; 
+    cursor: pointer; 
+}
+
+.card:hover { 
+    transform: translateY(-5px); 
+}
+
+.card img { 
+    width: 100%; 
+    height: 180px; 
+    object-fit: cover; 
+}
+
+.card-info { 
+    padding: 15px; 
+}
+
+.price { 
+    font-weight: 800; 
+    color: var(--primary); 
+    margin-top: 10px; 
+    border-top: 1px solid #eee; 
+    padding-top: 10px; 
+}
+
+.no-results { 
+    text-align: center; 
+    padding: 40px; 
+    color: #777; 
+    font-weight: 600; 
+}
+
+/* 6. Footer */
+footer { 
+    background: #1a1a1a; 
+    color: white; 
+    padding: 2rem 8%; 
+    text-align: center;
+}
+
+/* style.css */
+
+/* 1. Atur Modal (Background gelap di belakang) */
+.modal {
+    /* ... properti yang sudah ada ... */
+    position: fixed;
+    z-index: 1000; /* Pastikan di atas semua elemen */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; /* Penting: Ambil 100% tinggi layar */
+    overflow: auto; /* Memungkinkan scroll pada overlay modal (meski tidak disarankan) */
+    background-color: rgba(0, 0, 0, 0.6); 
+    display: none; 
+}
+
+/* 2. Atur Modal Content (Kotak Putih di Tengah) */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* Jarak atas dan tengah, lebih kecil agar ada ruang scroll */
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%; /* Lebar di mobile/tablet */
+    max-width: 600px; /* Lebar maksimum untuk desktop */
+    border-radius: 12px;
+    
+    /* PENTING: Untuk mengaktifkan scroll di dalam Modal Content */
+    max-height: 90vh; /* Batasi tinggi Modal Content (misalnya 90% tinggi viewport) */
+    overflow-y: auto; /* Ini adalah kunci agar konten di dalam kotak bisa di-scroll */
+    
+    /* Hilangkan padding default pada elemen saat Modal ditampilkan */
+    box-sizing: border-box; 
+}
+
+/* 3. Media Query (Opsional tapi Disarankan) */
+/* Pastikan pada layar yang lebih kecil, margin atas lebih kecil */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 20px auto; /* Margin atas lebih kecil di mobile */
+    }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px; top: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #888;
+}
+
+.modal-detail-img {
+    width: 100%; height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.order-form {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.btn-order {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    width: 100%;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}/* Styling Halaman Login */
+
+.login-body {
+    /* Gunakan background yang berbeda untuk halaman login */
+    background: #f0f0f0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin-top: -50px; /* Geser ke atas sedikit */
+}
+
+.login-box {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.back-link {
+    display: block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.login-title {
+    color: var(--primary);
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    text-decoration: none;
+    margin-top: -10px;
+}
+
+.btn-login-submit {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: var(--transition);
+}
+
+.btn-login-submit:hover {
+    background: var(--accent);
+}
+
+.register-text {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.9rem;
+}
+
+.register-text a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}.hero {
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)), 
+                url('OIP\ \(4\).webp'); /* URL Peta Indonesia */
+    /* ... properti lainnya ... */
+}
+/* Styling Dropdown Menu Bantuan */
+.dropdown {
+    position: relative;
+    display: inline-block; /* Agar sejajar dengan item navigasi lain */
+    margin-right: 15px; /* Jarak sebelum tombol Masuk */
+}
+
+.nav-help-btn {
+    background: none;
+    border: none;
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+
+.nav-help-btn:hover {
+    background: #f0f0f0;
+}
+
+.dropdown-content {
+    display: none; /* Sembunyikan secara default */
+    position: absolute;
+    background-color: var(--white);
+    min-width: 150px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0; /* Posisikan di kanan (pojok) */
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.dropdown-content a {
+    color: var(--text-dark);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin: 0; /* Hapus margin dari nav a */
+}
+
+.dropdown-content a:hover {
+    background-color: #f7f7f7;
+    color: var(--primary);
+}
+
+/* Kelas yang akan ditambahkan oleh JS saat dropdown terbuka */
+.dropdown-content.show {
+    display: block;
+}
+/* Pada file style.css, di bagian styling Login */
+.input-group input,
+.input-group select, /* TAMBAHKAN INI */
+.input-group textarea { /* TAMBAHKAN INI */
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.input-group textarea {
+    resize: vertical; /* Agar pengguna bisa mengubah ukuran secara vertikal */
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+/* Styling Baru untuk Logo dan Teks di Header */
+
+/* 1. Atur Kontainer Logo menggunakan Flexbox */
+.logo {
+    font-size: 2.0rem;
+    font-weight: 800;
+    color: var(--primary); /* Ganti warna jika perlu */
+    
+    /* PENTING: Gunakan Flexbox untuk mensejajarkan gambar dan teks */
+    display: flex;
+    align-items: center; /* Pusatkan secara vertikal */
+    gap: 10px; /* Jarak antara gambar logo dan teks */
+}
+
+/* 2. Atur Ukuran Gambar Logo */
+.header-logo {
+    height: 80px; /* Sesuaikan tinggi logo */
+    width: auto;
+}
+
+/* 3. Pastikan Header juga menggunakan Flexbox untuk mensejajarkan logo dan nav */
+header {
+    /* ... properti yang sudah ada ... */
+    display: flex; /* Jika belum ada, tambahkan ini */
+    justify-content: space-between; /* Menjauhkan logo dan navigasi */
+    align-items: center;
+    padding: 15px 5%;
+    /* ... properti background lainnya ... */
+}
